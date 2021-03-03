@@ -1,0 +1,108 @@
+/*IMPORTS**********************************************************/
+.container .block1, .container .block2, .container .block3, .container .block4 {
+  display: inline-block;
+  width: 400px;
+  height: 240px;
+  background-color: white;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+/*CONTAINERS*******************************************************/
+.container {
+  /******/
+  /******/
+  /******/
+}
+
+.container ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 320px;
+  border: 2px black;
+  font-weight: bolder;
+}
+
+.container li {
+  list-style-type: none;
+}
+
+.container input[type=text] {
+  font-weight: bolder;
+  height: 25px;
+}
+
+.container button {
+  display: block;
+  width: 180px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.container .block2 {
+  height: 280px;
+}
+
+.container .block3 {
+  height: 160px;
+}
+
+.container .block3 .placeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .block3 .placeContainer .redTitle {
+  color: #990000;
+}
+
+.container .block3 .placeContainer .blueTitle {
+  color: #003399;
+}
+
+.container .block4 {
+  height: 100px;
+  width: 200px;
+}
+
+.container .block4 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .block4 div button {
+  margin-left: 10px;
+}
+
+/*GENERAL**********************************************************/
+body {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+/*CLASS************************************************************/
+.colorRed {
+  color: #990000;
+}
+
+.colorBlue {
+  color: #003399;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,80 @@
+/*IMPORTS**********************************************************/
+@import "base";
+
+/*CONTAINERS*******************************************************/
+.container {
+    ul {
+        align-items: center;
+        width: 320px;
+        border: 2px black;
+        font-weight: bolder;
+    }
+    li {
+        list-style-type: none;
+    }
+    input[type=text] {
+        font-weight: bolder;
+        height: 25px;
+    }
+    button {
+        display: block;
+        width: 180px;
+        height: 25px;
+    
+        margin-top: 10px;
+    }
+    /******/
+    .block1 {
+        @extend %box;
+
+    }
+    /******/
+    .block2 {
+        @extend %box;
+        height: 280px;
+
+    }
+    /******/
+    .block3 {
+        @extend %box;
+        height: 160px;
+        
+        .placeContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            .redTitle { color: $redBid;}
+            .blueTitle{ color: $blueBid;}
+        }
+    }
+    .block4 {
+        @extend %box;
+        height: 100px;
+        width: 200px;
+
+        div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            button { margin-left: 10px;}
+        }
+    }
+}
+/*GENERAL**********************************************************/
+body {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+/*CLASS************************************************************/
+.colorRed {
+    color: $redBid;
+}
+.colorBlue {
+    color: $blueBid;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Bidding App</title>
+</head>
+<body>
+    <div class="container">
+<!--BLOCK-1---------------------------------------->
+        <div class="block1">
+            <h1>Highest Bid</h1>
+            <input id="highest" type="text" readonly>
+            <h2>Runner Up</h2>
+            <input id="runnerUp" type="text" readonly>
+        </div>
+        <br>
+<!--BLOCK-2---------------------------------------->
+        <div class="block2">
+            <h3>Latest Bidding History</h3>
+            <ul id="historyList"></ul>
+        </div>
+        <br>
+<!--BLOCK-3---------------------------------------->
+        <div class="block3">
+            <div class="placeContainer">
+                <div>
+                    <h4 class="redTitle">Red Bidder Placer #1</h4>
+                    <input id="bidPlacer1" type="text" autocomplete="off">
+                    <button id="bp1" onclick="textToArray(this.id)">Place Bid</button>
+                </div>
+                <div>
+                    <h4 class="blueTitle">Blue Bidder Placer #2</h4>
+                    <input id="bidPlacer2" type="text" autocomplete="off">
+                    <button id="bp2" onclick="textToArray(this.id)">Place Bid</button>
+                </div>
+            </div>
+        </div>
+        <br>
+<!--BLOCK-4---------------------------------------->
+        <div class="block4">
+            <div>
+                <h5>Clear Local History</h5>
+                <button onclick=(clearLocalData())>Clear It</button>
+            </div>
+        </div>
+    </div>
+<!------------------------------------------------->
+    <script src="javascript/jquery-3.5.1.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+</html>
