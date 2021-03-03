@@ -1,7 +1,7 @@
 //VARIABLES-----------------------------------------------------------
     //set variables
-let history = loadLocalDataHistory();
-let colors = loadLocalDataColors();
+let history = loadLocalData("historyArray");//loadLocalDataHistory();
+let colors = loadLocalData("colorsArray");//loadLocalDataColors();
 let fullList;
 let item;
 
@@ -16,7 +16,7 @@ let historyList = document.getElementById("historyList");
 
 
 //START UP------------------------------------------------------------
-loadLocalData();
+compileLocalData();
 
 
 
@@ -85,9 +85,8 @@ function saveLocalData(){
 }
 
 
-function loadLocalData(){
+function compileLocalData(){
     if ((history != []) && (colors != [])) {
-        console.log(history[0]); console.log(colors[0]);
         if (colors[0] == "r") { red.disabled = true; }
         if (colors[0] == "b") { blue.disabled = true; }
         addToElement();
@@ -95,23 +94,8 @@ function loadLocalData(){
 }
 
 
-function loadLocalDataHistory() {
-    test = localStorage.getItem("historyArray");
-    if (test == undefined) { h = []; return h;}
-    else {
-        h = JSON.parse(localStorage.getItem("historyArray"));
-        return h;
-    }
-}
-
-
-function loadLocalDataColors() {
-    test = localStorage.getItem("colorsArray");
-    if (test == undefined) { c = []; return c;}
-    else {
-        c = JSON.parse(localStorage.getItem("colorsArray"));
-        return c;
-    }
+function loadLocalData(array) {
+    return JSON.parse(localStorage.getItem(array)) || [];
 }
 
 
